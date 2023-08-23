@@ -1,92 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <!-- Color theme for statusbar (Android only) -->
-  <meta name="theme-color" content="#2196f3">
-  <!-- Your app title -->
-  <title>My App</title>
-  <!-- Path to Framework7 Library Bundle CSS -->
-  <link rel="stylesheet" href="/node_modules/framework7/framework7-bundle.min.css">
-  <!-- Path to your custom app styles-->
-  <link rel="stylesheet" href="/src/css/app.css">
-  <style>
-    /* Custom styles for navbar and form */
-    .navbar {
-      background-color: #2196f3; /* Set your preferred color */
-    }
-    .form-page-content {
-      padding: 20px;
-    }
-    .form-label {
-      color: #333; /* Set your preferred color */
-    }
-    .form-input {
-      border: 1px solid #ccc; /* Set your preferred color */
-    }
-  </style>
+    <!-- Metadatos y enlaces a recursos -->
+    <link rel="stylesheet" href="src/css/app.css">
 </head>
 <body>
-  <!-- App root element -->
-  <div id="app">
-
-    <!-- Your main view, should have "view-main" class -->
-    <div class="view view-main">
-      <!-- Initial Page, "data-name" contains page name -->
-      <div data-name="home" class="page">
-
-        <!-- Top Navbar -->
-        <div class="navbar">
-          <div class="navbar-bg"></div>
-          <div class="navbar-inner">
-            <div class="title">Awesome App</div>
-          </div>
-        </div>
-
-        <!-- Scrollable page content -->
-        <div class="page-content form-page-content">
-          <form>
-            <div class="list">
-              <ul>
-                <li class="item-content item-input">
-                  <div class="item-inner">
-                    <div class="item-title form-label">Nombre:</div>
-                    <div class="item-input-wrap">
-                      <input type="text" class="form-input" placeholder="Tu nombre">
+    <div id="app">
+        <!-- Contenedor principal de la aplicación -->
+        <div class="views">
+            <div class="view view-main">
+                <div class="navbar">
+                    <div class="title">Mi Aplicación</div>
+                </div>
+                <div class="page-content">
+                    <!-- Contenido de la página -->
+                    <div class="row">
+                        <div class="col">
+                            <p>¡Bienvenido a mi aplicación con Framework7!</p>
+                        </div>
+                        <div class="col">
+                            <!-- Formulario -->
+                            <form id="my-form">
+                                <div class="list">
+                                    <ul>
+                                        <li class="item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-title item-label">Nombre:</div>
+                                                <div class="item-input-wrap">
+                                                    <input type="text" name="name" placeholder="Ingrese su nombre" required>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item-content">
+                                            <div class="item-inner">
+                                                <div class="item-input-wrap">
+                                                    <button type="submit" class="button">Enviar</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                  </div>
-                </li>
-                <li class="item-content item-input">
-                  <div class="item-inner">
-                    <div class="item-title form-label">Email:</div>
-                    <div class="item-input-wrap">
-                      <input type="email" class="form-input" placeholder="Tu email">
-                    </div>
-                  </div>
-                </li>
-                <li class="item-content item-input">
-                  <div class="item-inner">
-                    <div class="item-title form-label">Mensaje:</div>
-                    <div class="item-input-wrap">
-                      <textarea class="form-input" placeholder="Escribe tu mensaje"></textarea>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+                </div>
             </div>
-            <div class="block">
-              <button class="button">Enviar</button>
-            </div>
-          </form>
         </div>
-      </div>
     </div>
-  </div>
-  <!-- Path to Framework7 Library Bundle JS-->
-  <script type="text/javascript" src="/node_modules/framework7/framework7-bundle.min.js"></script>
-  <!-- Path to your app js-->
-  <script type="text/javascript" src="/src/js/app.js"></script>
+    <script src="src/js/app.js"></script>
+    <script src="src/js/routes.js"></script>
+    <script src="src/js/store.js"></script>
 </body>
 </html>

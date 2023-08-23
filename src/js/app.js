@@ -1,20 +1,15 @@
-import { createApp } from 'framework7/core';
-import routes from '../js/routes';
-import App from '../app.f7';
+import Framework7 from 'framework7';
+import routes from '/src/js/routes';
 
-const app001 = createApp(App, { routes });
-app001.init();
+// Inicializar la aplicación
+const app = new Framework7({
+    root: '#app',
+    name: 'MyApp',
+    theme: 'auto',
+    // Otras configuraciones
+});
 
-
-var app = new Framework7({
-  name: 'MyApp', // App name
-  theme: 'auto', // Automatic theme detection
-
-
-  el: '#app', // App root element
-  component: App, // App main component
-  // App store
-  store: store,
-  // App routes
-  routes: routes,
+// Agregar rutas
+app.views.create('.view-main', {
+    routes: routes,
 });
