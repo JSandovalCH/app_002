@@ -1,4 +1,4 @@
-import HomePage from '../pages/home.f7';
+import HomePage from '/src/pages/home.f7';
 
 const routes = [
   {
